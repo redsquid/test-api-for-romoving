@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: liquibase/create-table-record.yaml
+    enabled: true
+  mvc:
+    format.date-time: yyyy-MM-dd.HH:mm:ss
+
+logging:
+  level:
+    org.zalando.logbook: TRACE
+
+app:
+  removing-records-per-iteration: 100000
+  threads-for-removing: 5
